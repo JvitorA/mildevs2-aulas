@@ -1,6 +1,6 @@
 package br.com.mesttra.aulas.aula02.universidade;
 
-public class Funcionario {
+public abstract class Funcionario {
 
 	
 //		Os atributos comuns de todos os funcionários serão: 
@@ -20,6 +20,10 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
+	public Funcionario() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void aumentaSalario() {
 		this.salario = this.salario * 1.1;
 	}
