@@ -9,7 +9,8 @@ public class ProgramaFormas {
 		FormaGeometrica quadrado = new Quadrado(1.0);
 		FormaGeometrica retangulo = new Retangulo(2.0,7.0);
 		FormaGeometrica triangulo = new Triangulo(3.0, 6.0);
-		FormaGeometrica circulo = new Circulo(5.0);
+		FormaGeometrica circulo = null;
+		circulo.calculaArea();
 		
 //		System.out.println("AREA QUADRADO: " + quadrado.calculaArea());
 //		System.out.println("AREA RETANGULO: " + retangulo.calculaArea());

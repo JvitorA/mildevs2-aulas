@@ -8,8 +8,23 @@ public class Coordenador extends Funcionario {
 
 	public Coordenador(String nome, String cpf, int nroRegistro, String orgaoLotacao, double salario) {
 		super(nome, cpf, nroRegistro, orgaoLotacao, salario);
-		this.professoresSupervisionados = new Professor[10];
+		this.professoresSupervisionados = new Professor[2];
 	}
+	
+	
+	public void adicionaProfessor(Professor professor) throws CoordenadorSobrecarregadoException {
+		
+		for (int i = 0; i < this.professoresSupervisionados.length; i++) {
+			if (this.professoresSupervisionados[i] == null) {
+				this.professoresSupervisionados[i] = professor;
+				return;
+			}
+		}
+		
+		throw new CoordenadorSobrecarregadoException(professor);
+		
+	}
+	
 
 	public Professor[] getProfessoresSupervisionados() {
 		return professoresSupervisionados;

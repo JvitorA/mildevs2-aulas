@@ -1,4 +1,4 @@
-package br.com.mesttra.aulas.aula00;
+package br.com.mesttra.aulas.aula00.elevador;
 
 public class Elevador {
 	
@@ -41,16 +41,27 @@ public class Elevador {
 		}
 	}
 	
-	public void sobe() {
+	
+//	1. Crie uma exceção personalizada para os métodos sobe() e desce() da classe Elevador. 
+//	Depois disso, modifique o seu programa principal para se adequar ao uso dessas exceções. 
+//	Crie também uma condição de código para que a exceção ocorra e observe sua stacktrace.
+	
+	
+	public void sobe() throws MovimentoSubidaElevadorException {
 		if (andarAtual + 1 <= totalAndares) {
 			andarAtual++;
+			return;
 		}
+		
+		throw new MovimentoSubidaElevadorException("Não foi possível subir!");
 	}
 	
-	public void desce() {
+	public void desce() throws MovimentoDescidaElevadorException {
 		if (andarAtual - 1 >= 0) {
 			andarAtual--;
 		}
+		
+		throw new MovimentoDescidaElevadorException("Não foi possível subir!");
 	}
 
 	public int getCapacidade() {
